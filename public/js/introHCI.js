@@ -10,7 +10,7 @@ $(document).ready(function() {
  */
 function initializePage() {
 	$('.project a').click(addProjectDetails);
-
+	$.get("http://http://localhost:3000/idNumber", callBackFn)
 	// $('#colorBtn').click(randomizeColors);
 }
 
@@ -27,4 +27,12 @@ function addProjectDetails(e) {
 	var idNumber = projectID.substr('project'.length);
 
 	console.log("User clicked on project " + idNumber);
+
+}
+
+function addProject(results) {
+	// Prevent following the link
+	e.preventDefault();
+
+	
 }
